@@ -1,14 +1,26 @@
 // STEP 1: Declare and initialize a global variable (x = 1)
-
+let x = 1;
 
 // STEP 2: Build a function that accepts no parameters, and also declares and intializes a variable within it (y = 2)
-
+function a(){
+    let y = 2;
+    output(x);
+    output(z);
+}
 
 // STEP 3: Build another function that also accepts no parameters, and also declares and intializes a variable within it (z = 3)
-
+function b(){
+    let z = 3;
+    output(x);
+    output(y);
+}
 
 // STEP 4: Analyze the following function that accepts a value, then creates an H2 element, injects it into the DOM, then sets the content to the value of the parameter passed into it when in was called (invoked)
-
+function output(value){
+    const elem = document.createElement('h2');
+    document.body.prepend(elem);
+    elem.textContent= 'Value of variable is: ' + value;
+}
 
 /* STEP 5: Punch the following directly into the console:
 output(x)
@@ -61,10 +73,10 @@ const functionName = (parameters) =>{
     };
     */
    //one parameter, no need of paranthesis
-   const square = x =>x * x;
-   //one expression, you can skip curly braces
-   const add = (a,b) => a + b;
-   console.log(add(4,5));
+//    const square = x =>x * x;
+//    //one expression, you can skip curly braces
+//    const add = (a,b) => a + b;
+//    console.log(add(4,5));
 
    //Arrow funxction in Event Handling
   /* button.addEventListener('click',function()=>{
