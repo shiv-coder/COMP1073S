@@ -14,7 +14,7 @@
 </div>
 
 <script>
-    ////EVent CApturing:Opposite of Event Bubbling
+    ////EVent CApturing:Opposite of Event Bubbling:{capture:true}
   
    document.getElementById("outer").addEventListener("click", function () {
     console.log("Outer DIV clicked capturing");
@@ -22,18 +22,10 @@
 );
  document.getElementById("inner").addEventListener("click", function () {
     
-    console.log("Inner DIV clicked capture");
+    console.log("Button  clicked Bubbling");
   });
   
-    document.getElementById("btn").addEventListener("click", function (event) {
-      event.stopPropagation();
-      console.log("Button clicked");
-  });
-
- 
-
- 
-
+  
 </script>
 
 </body>
