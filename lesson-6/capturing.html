@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Event Bubbling Example</title>
+</head>
+<body>
+
+<div id="outer" style="padding: 20px; background-color: lightblue;">
+  Outer DIV
+  <div id="inner" style="padding: 20px; background-color: lightgreen;">
+    Inner DIV
+    <button id="btn">Click Me</button>
+  </div>
+</div>
+
+<script>
+    ////EVent CApturing:Opposite of Event Bubbling
+  
+   document.getElementById("outer").addEventListener("click", function () {
+    console.log("Outer DIV clicked capturing");
+  },true//This enables capturing phase
+);
+ document.getElementById("inner").addEventListener("click", function () {
+    
+    console.log("Inner DIV clicked capture");
+  });
+  
+    document.getElementById("btn").addEventListener("click", function (event) {
+      event.stopPropagation();
+      console.log("Button clicked");
+  });
+
+ 
+
+ 
+
+</script>
+
+</body>
+</html>

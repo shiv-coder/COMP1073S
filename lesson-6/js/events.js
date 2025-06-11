@@ -56,4 +56,3 @@ btn.removeEventListener('click',bgChange);
 
 
 
-//EVent Bubbling:When an event happens on child element, it bubbles up throught its parent element one by one.

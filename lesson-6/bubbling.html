@@ -14,17 +14,22 @@
 </div>
 
 <script>
-  document.getElementById("btn").addEventListener("click", function () {
-    console.log("Button clicked");
+    ////EVent Bubbling:When an event happens on child element, it bubbles up throught its parent element one by one.
+  document.getElementById("btn").addEventListener("click", function (event) {
+      event.stopPropagation();
+      console.log("Button clicked");
   });
 
   document.getElementById("inner").addEventListener("click", function () {
+    
     console.log("Inner DIV clicked");
   });
 
   document.getElementById("outer").addEventListener("click", function () {
     console.log("Outer DIV clicked");
   });
+
+
 </script>
 
 </body>
